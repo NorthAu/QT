@@ -11,22 +11,60 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>EdgeSense 控制面板</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow#MainWindow 
-{
-border-color: rgb(234, 234, 234);
+   <string notr="true">QMainWindow#MainWindow {
+    background-color: #0b1220;
+    color: #e5e7eb;
 }</string>
   </property>
   <widget class="QWidget" name="mainWidget">
    <property name="styleSheet">
-    <string notr="true">#mainWidget
-{
-	background-color: #EAEAEA;
-	
-	border-color: rgb(234, 234, 234);
-}</string>
+    <string notr="true">#mainWidget {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #0b1220, stop:1 #111827);
+    color: #e5e7eb;
+}
+
+QLabel {
+    color: #e5e7eb;
+}
+
+QPushButton, QToolButton {
+    background-color: #2563eb;
+    color: #f8fafc;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 18px;
+}
+
+QPushButton:hover, QToolButton:hover {
+    background-color: #1d4ed8;
+}
+
+QPushButton:pressed, QToolButton:pressed {
+    background-color: #1e3a8a;
+}
+
+QComboBox {
+    background-color: #111827;
+    color: #e5e7eb;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+QCheckBox {
+    color: #e5e7eb;
+}
+
+QLCDNumber {
+    background: #0f172a;
+    color: #22d3ee;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+}
+</string>
    </property>
    <widget class="QWidget" name="layoutWidget_1">
     <property name="geometry">
@@ -87,9 +125,9 @@ border-color: rgb(234, 234, 234);
            <property name="styleSheet">
             <string notr="true">#widget_actuator_control_beep
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
 }</string>
            </property>
            <widget class="QWidget" name="layoutWidget_2">
@@ -137,7 +175,8 @@ border-color: rgb(234, 234, 234);
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">border-image: url(:/icon/switch-off.png);</string>
+                <string notr="true">border-image: url(:/icon/switch-off.png);
+border-radius: 12px;</string>
                </property>
                <property name="text">
                 <string/>
@@ -159,9 +198,9 @@ border-color: rgb(234, 234, 234);
            <property name="styleSheet">
             <string notr="true">#widget_actuator_control_led
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
 }</string>
            </property>
            <widget class="QWidget" name="layoutWidget_3">
@@ -221,10 +260,13 @@ border-color: rgb(234, 234, 234);
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">QComboBox#comboBox_led_color
+                <string notr="true">QComboBox#combo_box_led_color
 {
-	color:black;
-	background-color: rgb(255, 255, 255);
+    color: #e5e7eb;
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 6px 10px;
 }</string>
                </property>
                <item>
@@ -326,9 +368,9 @@ border-color: rgb(234, 234, 234);
          <property name="styleSheet">
           <string notr="true">#widget_tah_chart
 {
-background-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-border-radius: 15px;
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
 }</string>
          </property>
          <widget class="QCustomPlot" name="custom_plot_tah" native="true">
@@ -439,12 +481,13 @@ border-radius: 15px;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">#widget_tah_chart
+          <string notr="true">#widget_sensors
 {
-background-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-border-radius: 15px;
-}</string>
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+</string>
          </property>
          <widget class="QWidget" name="layoutWidget_4">
           <property name="geometry">
@@ -473,10 +516,11 @@ border-radius: 15px;
              <property name="styleSheet">
               <string notr="true">#widget_tah
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+</string>
              </property>
              <widget class="QWidget" name="layoutWidget_5">
               <property name="geometry">
@@ -698,10 +742,20 @@ border-radius: 15px;
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QPushButton#pushButton_tah
-{
-	background-color: rgb(255, 255, 255);
-}</string>
+                  <string notr="true">QPushButton#button_tah {
+    background-color: #22d3ee;
+    color: #0b1220;
+    border-radius: 12px;
+}
+
+QPushButton#button_tah:hover {
+    background-color: #06b6d4;
+}
+
+QPushButton#button_tah:pressed {
+    background-color: #0891b2;
+}
+</string>
                  </property>
                  <property name="text">
                   <string>开始监测</string>
@@ -742,10 +796,11 @@ border-radius: 15px;
              <property name="styleSheet">
               <string notr="true">#widget_triad_light
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+</string>
              </property>
              <widget class="QWidget" name="layoutWidget_6">
               <property name="geometry">
@@ -1036,10 +1091,20 @@ border-radius: 15px;
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QPushButton#pushButton_triad_light
-{
-	background-color: rgb(255, 255, 255);
-}</string>
+                  <string notr="true">QPushButton#button_triad_light {
+    background-color: #a855f7;
+    color: #0b1220;
+    border-radius: 12px;
+}
+
+QPushButton#button_triad_light:hover {
+    background-color: #9333ea;
+}
+
+QPushButton#button_triad_light:pressed {
+    background-color: #7e22ce;
+}
+</string>
                  </property>
                  <property name="text">
                   <string>开始监测</string>
@@ -1080,10 +1145,11 @@ border-radius: 15px;
              <property name="styleSheet">
               <string notr="true">QWidget#widget_acceleration
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+</string>
              </property>
              <widget class="QWidget" name="layoutWidget_7">
               <property name="geometry">
@@ -1359,10 +1425,20 @@ border-radius: 15px;
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QPushButton#pushButton_triad_light
-{
-	background-color: rgb(255, 255, 255);
-}</string>
+                  <string notr="true">QPushButton#button_acceleration {
+    background-color: #34d399;
+    color: #0b1220;
+    border-radius: 12px;
+}
+
+QPushButton#button_acceleration:hover {
+    background-color: #22c55e;
+}
+
+QPushButton#button_acceleration:pressed {
+    background-color: #16a34a;
+}
+</string>
                  </property>
                  <property name="text">
                   <string>开始监测</string>
@@ -1403,10 +1479,11 @@ border-radius: 15px;
              <property name="styleSheet">
               <string notr="true">#widget_adc
 {
-	background-color: rgb(255, 255, 255);
-	border-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 18px;
+}
+</string>
              </property>
              <widget class="QWidget" name="layoutWidget_8">
               <property name="geometry">
@@ -1660,10 +1737,20 @@ border-radius: 15px;
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">QPushButton#pushButton_tah
-{
-	background-color: rgb(255, 255, 255);
-}</string>
+                  <string notr="true">QPushButton#button_adc {
+    background-color: #f97316;
+    color: #0b1220;
+    border-radius: 12px;
+}
+
+QPushButton#button_adc:hover {
+    background-color: #ea580c;
+}
+
+QPushButton#button_adc:pressed {
+    background-color: #c2410c;
+}
+</string>
                  </property>
                  <property name="text">
                   <string>开始监测</string>
@@ -1697,15 +1784,48 @@ border-radius: 15px;
        <property name="font">
         <font>
          <family>Noto Sans S Chinese Black</family>
-         <pointsize>20</pointsize>
+         <pointsize>22</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">color: #38bdf8;</string>
+       </property>
        <property name="text">
-        <string>六合一传感器</string>
+        <string>EdgeSense · 六合一传感器中枢</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_text_tagline">
+       <property name="font">
+        <font>
+         <family>Noto Sans S Chinese Medium</family>
+         <pointsize>10</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #cbd5e1;</string>
+       </property>
+       <property name="text">
+        <string>实时监测 · 触控控制 · 即时反馈</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="h_spacer_header">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
       <widget class="QPushButton" name="button_close">
