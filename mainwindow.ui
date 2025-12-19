@@ -64,6 +64,27 @@ QLCDNumber {
     border: 1px solid #1f2937;
     border-radius: 12px;
 }
+
+#custom_plot_tah {
+    background-color: #0b1220;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+}
+
+#label_text_actuator_control, #label_text_tah_chart, #label_text_sensor_data {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #cbd5e1;
+}
+
+#label_text_six_in_one {
+    letter-spacing: 1px;
+}
+
+/* 卡片统一阴影与内边距感 */
+#widget_tah, #widget_triad_light, #widget_acceleration, #widget_adc, #widget_tah_chart, #widget_sensors, #widget_actuator_control_beep, #widget_actuator_control_led {
+    padding: 6px;
+}
 </string>
    </property>
    <widget class="QWidget" name="layoutWidget_1">
